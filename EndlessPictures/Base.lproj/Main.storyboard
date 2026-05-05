@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dgw-jU-1p1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eu8-eG-gaW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-jV-aut">
-                                <rect key="frame" x="16" y="118" width="361" height="666"/>
+                                <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <color key="backgroundColor" name="YPBlack"/>
                                 <color key="sectionIndexBackgroundColor" name="YPGray"/>
                                 <prototypes>
@@ -90,13 +90,36 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IzP-jV-aut" secondAttribute="trailing" id="bRh-YJ-sFs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="7Bv-zr-mI5"/>
                     <connections>
                         <outlet property="tableView" destination="IzP-jV-aut" id="chd-Z2-oc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="82"/>
+            <point key="canvasLocation" x="-738" y="-718"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yke-O8-Sfu">
+            <objects>
+                <tabBarController id="eu8-eG-gaW" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jVP-FG-okn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="YPWhite"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="YPBlack"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AHx-AQ-Tmu"/>
+                        <segue destination="dgw-jU-1p1" kind="relationship" relationship="viewControllers" id="WrE-Ax-M5I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Llh-BQ-wRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1785" y="-333"/>
         </scene>
         <!--Profile-->
         <scene sceneID="y1Q-BN-pPC">
@@ -162,6 +185,7 @@
                             <constraint firstItem="Qmv-yg-Evy" firstAttribute="top" secondItem="Smy-rT-ZnV" secondAttribute="bottom" constant="8" id="yRI-3X-7hL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="MwG-If-HK4"/>
                     <connections>
                         <outlet property="avatarImageView" destination="txz-VU-wwm" id="pb4-aN-O7a"/>
                         <outlet property="descriptionLabel" destination="hS5-W3-F8i" id="wLn-gX-aRX"/>
@@ -180,6 +204,8 @@
         <image name="Exit" width="24" height="24"/>
         <image name="Photo" width="70" height="70"/>
         <image name="likeButtonOn" width="44" height="44"/>
+        <image name="tab_editorial_active" width="30" height="30"/>
+        <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YPBlack">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
